@@ -1,1 +1,1 @@
-export declare const productRoutes: (server: any, options: any) => void;
+export declare const productRoutes: (server: any, options: any) => Promise<void>;
