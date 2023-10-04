@@ -1,21 +1,17 @@
 import fastify from 'fastify';
-import "reflect-metadata";
-import { Money } from './Financial/entities.js';
 import { Product } from './product/entities.js';
 import { productRoutes } from './product/api.js';
 const server = fastify();
-server.register(productRoutes);
-server.register(require('fastify-typeorm-plugin'), {
-    user: 'postgres',
-    host: '127.0.0.1',
+server.register(import('fastify-typeorm-plugin'), {
+    username: 'postgres',
+    host: 'localhost',
     database: 'e_shop_ff_orm',
     password: '01133',
     port: 5432,
     type: 'postgres',
-    entities: [Product, Money],
-    synchronize: true,
-    logging: true,
+    entities: [Product],
 });
+server.register(productRoutes);
 const product = Product;
 server.get('/', async (request, reply) => {
     return reply.code(200).send({ status: 'active' });

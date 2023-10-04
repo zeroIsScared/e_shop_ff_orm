@@ -1,6 +1,6 @@
-import { Money } from "../Financial/entities.ts";
+import { Money } from "../Financial/entities.js";
 export declare class Product {
     id: number;
     name: string;
-    price: Money[];
+    price: Money;
 }

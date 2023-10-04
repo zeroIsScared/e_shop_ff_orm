@@ -6,6 +6,6 @@
         "module": "NodeNext",
         "declaration": true,
         "experimentalDecorators": true,
-        "allowImportingTsExtensions": true
+        "emitDecoratorMetadata": true      
     }
 }
