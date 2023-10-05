@@ -6,6 +6,7 @@
         "module": "NodeNext",
         "declaration": true,
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true      
+        "emitDecoratorMetadata": true,
+        "rootDir": "./src",    
     }
 }

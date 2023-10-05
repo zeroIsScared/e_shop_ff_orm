@@ -24,7 +24,7 @@ __decorate([
     __metadata("design:type", Money)
 ], Product.prototype, "price", void 0);
 Product = __decorate([
-    Entity()
+    Entity({ name: 'product' })
 ], Product);
 export { Product };
 // in the product module - create the entities.ts - which will hold the product entity class - 
